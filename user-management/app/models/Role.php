@@ -71,7 +71,7 @@ class Role extends \Phalcon\Mvc\Model
     public function initialize()
     {
         $this->setSchema("phalcon-td0");
-        $this->hasMany('id', 'User', 'idrole', ['alias' => 'User']);
+        $this->hasMany('id', 'User', 'idrole', ['alias' => 'Users']);
     }
 
     /**
