@@ -11,7 +11,7 @@ class UsersController
 
     public function indexAction($sField="firstname",$sens="asc",$filter=NULL) {
         $users = User::find(); //::find()
-        $this -> view->setCar("users",$users);
+        $this -> view->setVar("users",$users);
 
     }
     public function formAction($id=NULL) {
