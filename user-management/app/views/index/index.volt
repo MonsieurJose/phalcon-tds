@@ -1,15 +1,11 @@
-<head>
-    <meta charset="utf-8" />
-    <title>genre cest pas facil</title>
-</head>
-<body>
-<div class="ui menu" style ="margin-left : 15%;width : 70% ;">
-    <div class="ui left floated small labeled icon button" {{link_to("users/form","")}}>
+
+<div class="ui menu">
+    <a class="ui left floated small labeled icon button" href="{{url("users/form")}}">
         <i class="add user icon"></i> Nouvel Utilisateur...
-    </div>
+    </a>
 </div>
-<p style ="margin-left : 15%;">affichage des utilisateurs </p>
-<table class="ui very padded striped blue table" style = "width : 70% ; margin-left : 15%;">
+<p>affichage des utilisateurs </p>
+<table class="ui very padded striped blue table" >
 
     <thead class="ui celled table">
         <tr>
@@ -41,5 +37,3 @@
     {% endfor %}
     </tbody>
 </table>
-
-</body>

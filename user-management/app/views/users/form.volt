@@ -1,15 +1,50 @@
-<head>
-    <meta charset="utf-8" />
-    <title>genre cest pas facil</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
-</head>
-<body>
-<div class="ui menu" style ="margin-left : 15%;width : 70% ;">
-    <div class="ui left floated small labeled icon button">
+<div class="ui menu">
+    <a class="ui left floated small labeled icon button" href="{{ url("index") }}">
         <i class="sign out icon"></i> Retour à la liste
-    </div>
+    </a>
 </div>
-
-</body>
+<form class="ui form" action="{{url("Users/update")}}" method="post">
+    <div class="two fields">
+        <div class="field">
+            <label>Nom</label>
+            <input type="text" name="nom" placeholder="Votre nom...">
+        </div>
+        <div class="field">
+            <label>Prenom</label>
+            <input type="text" name="prenom" placeholder="Votre prénom...">
+        </div>
+    </div>
+    <div class="two fields">
+        <div class="field">
+            <label>Login *</label>
+            <input type="text" name="login" placeholder="Votre identifiant...">
+        </div>
+        <div class="field">
+            <label>Mot de passe *</label>
+            <input type="password" name="mdp" placeholder="Votre mot de passe...">
+        </div>
+    </div>
+    <div class="field">
+        <div class="field">
+            <label>Email</label>
+            <input type="text" name="email" placeholder="Votre email...">
+        </div>
+    </div>
+    <div class="field">
+        <label>Rôle</label>
+        <select name="role">
+            <option value="non-choisi">veuillez choisir un rôle</option>
+            <option value="user">user</option>
+            <option value="admin">admin</option>
+            <option value="superadmin">superadmin</option>
+        </select>
+    </div>
+    <div class="two fields">
+        <div class="field">
+            <button class="fluid green ui button">Valider</button>
+        </div>
+        <div class="field">
+            <button class="fluid grey ui button">Reinitialiser</button>
+        </div>
+    </div>
+</form>
